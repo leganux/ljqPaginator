@@ -47,7 +47,13 @@ var Elem = [];
 ```
 6.- Create the new ljqPaginator object.	
 ```
-<script src="http://cdn.leganux.com/LIB/ljqPaginator/dist/ljqPaginator.js" ></script>
+	Paginate = new ljqPaginator (
+					Elem,                  // Array with the conent to paginate.
+					'#Paginator_3000',    // ID of content DIV
+					'#PaginatorNum',     // ID of Numbers and Buttons DIV
+					3                    // Number of elements per page
+				);
+
 ```
 7.- Call the function to create the pagination and functions. 
 ```
