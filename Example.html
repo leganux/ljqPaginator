@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ljqPaginator by leganux</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+	</head>
+
+	<body>
+		<script
+				src="https://code.jquery.com/jquery-3.2.1.js"
+				integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+				crossorigin="anonymous"></script>
+		<script src="dist/ljqPaginator.js" > </script>
+		
+	<center> <h1> Ejemplo Uso ljqPaginator</h1></center>
+		<hr>
+
+		<div id="Paginator_3000" ></div>
+		<hr>
+		<div id="PaginatorNum" ></div>
+
+		<script >
+
+			$(document).ready(function(){
+
+
+
+				var Elem = []; 
+				for(i=0;i<553;i++){
+					Elem.push ('<h5>'+ (i+1)+ '.- </h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <b>commodo consequat. </b>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <a>anim id est laborum..... </a> <br>');
+				}
+
+				Paginate = new ljqPaginator (
+					Elem, // array con elementos
+					'#Paginator_3000', // ID del div donde se coloca el contenido 
+					'#PaginatorNum',// ID del div donde se coloca la numeracion
+					3 // Num elementos por pagina
+
+
+				);
+				Paginate.DrawPaginator();
+
+
+			});
+
+	
+
+		</script>
+	</body>
+</html>
